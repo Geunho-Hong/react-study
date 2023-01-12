@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="counter">0</div>
+    <button id="increment">증가</button>
+    <button id="decrement">감소</button>
+    <button id="reset">0으로 초기화</button>
+</body>
+</html>
+
+<script>
+        let count = 0;
+
+        const counter = document.getElementById("counter");
+        const incrementBtn = document.getElementById("increment");
+        const decrementBtn = document.getElementById("decrement");
+        const resetBtn = document.getElementById("reset");
+
+        incrementBtn.addEventListener("click", function(){
+            count++;
+            counter.innerHTML = count;
+        })
+
+        decrementBtn.addEventListener("click", function() {
+            count--;
+            counter.innerHTML = count;
+        })
+
+        resetBtn.addEventListener("click", function() {
+            count = 0;
+            counter.innerHTML = count;
+        })
+</script>
